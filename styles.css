@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: rgb(12, 12, 12);
+    font-family: "Orbitron";
+}
+
+.display{
+    min-height: 85px;
+    min-width: 30%;
+    margin-top: 0px;
+    border-bottom: 2px solid white;
+    text-align: center;
+    border-left:300px solid transparent;
+    border-right:300px solid transparent;
+    padding: 20px;
+    font-size:xx-large;
+    color: white;
+}
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 150px;
+}
+.board-wrapper {
+    background: rgb(7, 8, 12);
+    background: linear-gradient(90deg, rgba(7, 8, 12, 1) 0%, rgba(0, 66, 101, 1) 98%);
+    min-height: 550px;
+    width: 550px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 20px;
+    grid-gap: 0px 0px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.board-wrapper .item {
+    justify-self: center;
+    align-self: center;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.board-wrapper button {
+    border-style: none;
+    background-color: transparent;
+    color: white;
+    font-size: xx-large;
+}
+
+.board-wrapper button:nth-child(-n+3),
+.board-wrapper button:nth-child(n+4):nth-child(-n+6) {
+    border-bottom: 3px solid rgb(34, 81, 127);
+}
+
+.board-wrapper button:nth-child(3n+1) {
+
+    border-right: 3px solid rgb(34, 81, 127);
+}
+
+.board-wrapper button:nth-child(3n) {
+    border-left: 3px solid rgb(34, 81, 127);
+}
+
+.player{
+    background: linear-gradient(90deg, rgba(7, 8, 12, 1) 0%, rgba(0, 66, 101, 1) 98%);
+    color: white;
+    width: 300px;
+    height: 200px;
+    align-self: center;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    border-radius: 35px;
+}
+dialog{
+    background-color: rgb(13, 15, 35);
+    height: 220px;
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
+dialog>p{
+    font-size: x-large;
+    font-weight: 600;
+}
+
+dialog::backdrop{
+    background-color: black;
+}
+
+dialog:not([open]) {
+    display: none;
+}
+
+
+dialog > div > form > label >  input{
+    height: 30px;
+    font-size: large;
+}
+dialog > .submit{
+    border: none;
+    font-size: x-large;
+    font-family: "Orbitron";
+    margin-top: 30px;
+    padding: 5px 10px;
+    background-color: rgb(13, 15, 35);
+    color: white;
+    transition: all 0.3s ease-in;
+}
+
+dialog> .submit:hover{
+    transform: scale(1.2);
+    cursor: grab;
+    border:1px solid white;
+}
+
+dialog>.submit:active{
+    background-color: white;
+}
+
+
+dialog>.forms{
+display: flex;
+gap: 50px;
+}
+
+.score{
+    display: flex;
+    gap: 15px;
+}
+
+.token{
+    font-weight: 600;
+    font-size: xx-large;
+    font-style: italic;
+}
+
+.Reset{
+    border: none;
+    font-size: 25px;
+    background: linear-gradient(90deg, rgba(7, 8, 12, 1) 0%, rgba(0, 66, 101, 1) 98%);
+    color: white;
+    font-family: "Orbitron";
+    padding: 10px 30px;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.Reset:hover{
+    transform:scale(1.2);
+    font-weight: bold;
+}
